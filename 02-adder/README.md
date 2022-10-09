@@ -1,0 +1,2 @@
+EDA Playground: https://www.edaplayground.com/x/9bic
+CircuitVerse: https://circuitverse.org/users/98203/projects/digsys_adder
