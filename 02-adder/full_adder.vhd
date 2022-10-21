@@ -1,15 +1,16 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity half_adder is
+entity full_adder is
     port (
-        d1, d2         : in  std_logic;
-        carry_in       : in  std_logic;
-        sum, carry_out : out std_logic
+        d0, d1    : in  std_logic;
+        carry_in  : in  std_logic;
+        sum       : out std_logic;
+        carry_out : out std_logic
     );
-end half_adder;
+end full_adder;
 
-architecture rtl of half_adder is
+architecture rtl of full_adder is
 begin
     add : process( d1, d2, carry_in )
     begin
