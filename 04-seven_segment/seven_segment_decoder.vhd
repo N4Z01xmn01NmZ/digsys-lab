@@ -5,7 +5,7 @@ entity seven_segment_decoder is
     port (
         s : in  std_logic_vector(3 downto 0);
         c : out std_logic_vector(6 downto 0)
-    ) ;
+    );
 end seven_segment_decoder ;
 
 architecture rtl of seven_segment_decoder is

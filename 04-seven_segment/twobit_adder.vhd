@@ -14,7 +14,7 @@ architecture rtl of twobit_adder is
     -- Subcircuit component
     component full_adder is
         port (
-        d1, d2         : in  std_logic;
+        d0, d1         : in  std_logic;
         carry_in       : in  std_logic;
         sum, carry_out : out std_logic
         );
@@ -25,8 +25,8 @@ architecture rtl of twobit_adder is
     
 begin
     -- Link subcircuit
-    u0 : full_adder port map( d1(0), d2(0), cpr, sum(0), c0 );
-    u1 : full_adder port map( d1(1), d2(1), c0,  sum(1), c1 );
+    u0 : full_adder port map( d0(0), d1(0), cpr, sum(0), c0 );
+    u1 : full_adder port map( d0(1), d1(1), c0,  sum(1), c1 );
 
     cpr <= carry_in;
     carry_out <= c1;

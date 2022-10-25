@@ -12,9 +12,9 @@ end full_adder;
 
 architecture rtl of full_adder is
 begin
-    add : process( d1, d2, carry_in )
+    add : process( d0, d1, carry_in )
     begin
-        sum       <= (d1 xor d2) xor carry_in;
-        carry_out <= (d1 and d2) or ((d1 xor d2) and carry_in);
+        sum       <= (d0 xor d1) xor carry_in;
+        carry_out <= (d0 and d1) or ((d0 xor d1) and carry_in);
     end process; -- add
 end rtl; -- rtl
