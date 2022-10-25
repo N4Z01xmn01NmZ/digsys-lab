@@ -63,10 +63,11 @@ begin
 
     decoder : seven_segment_decoder port map(
         s => s_bin,
-        c => s_cat
+        c => s_cathode
     );
 
-    CAT <= s_cat;
-    ANO <= o_anode <= "0111";
+    CAT(6 downto 0) <= s_cathode;
+    CAT(7)          <= '1';
+    ANO             <= "0111";
 
 end rtl ; -- rtl
