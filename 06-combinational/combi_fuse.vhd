@@ -13,7 +13,6 @@ architecture rtl of combi_fuse is
     combi : process( d )
     begin
         case( d ) is
-        
             when "100"  => led <= "100";
             when "010"  => led <= "010";
             when "001"  => led <= "001";
